@@ -92,14 +92,11 @@ class _LoginPageState extends State<LoginPage> {
                                         setFunc: setShowPasword),
                                     forgotPasswordWidget(),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 8,
                                     ),
                                     Row(mainAxisSize: MainAxisSize.max, children: [
                                       Expanded(
                                         child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            padding: const EdgeInsets.all(14),
-                                          ),
                                           onPressed: () async {
                                             if (_loginFormKey.currentState!.validate()) {
                                               snackBarText.showBanner(msg: "Logging In", context: context);
@@ -126,13 +123,12 @@ class _LoginPageState extends State<LoginPage> {
                                       ),
                                     ]),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 8,
                                     ),
                                     Row(mainAxisSize: MainAxisSize.max, children: [
                                       Expanded(
                                         child: ElevatedButton(
-                                          style:
-                                              ElevatedButton.styleFrom(padding: const EdgeInsets.all(14), backgroundColor: UIColor().secondaryOrange),
+                                          style: ElevatedButton.styleFrom(backgroundColor: UIColor().secondaryOrange),
                                           onPressed: () async {
                                             snackBarText.showBanner(msg: "Welcome Back", context: context);
                                             showDialog(
@@ -157,13 +153,12 @@ class _LoginPageState extends State<LoginPage> {
                                       ),
                                     ]),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 8,
                                     ),
                                     Row(mainAxisSize: MainAxisSize.max, children: [
                                       Expanded(
                                         child: ElevatedButton(
-                                          style:
-                                              ElevatedButton.styleFrom(padding: const EdgeInsets.all(14), backgroundColor: UIColor().primaryOrange),
+                                          style: ElevatedButton.styleFrom(backgroundColor: UIColor().primaryOrange),
                                           onPressed: () async {
                                             snackBarText.showBanner(msg: "Welcome Back", context: context);
                                             showDialog(
@@ -208,14 +203,11 @@ class _LoginPageState extends State<LoginPage> {
                                     textInputs.inputTextWidget(
                                         hint: "username", validator: textInputs.usernameVerify, controller: userNameTextController),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 8,
                                     ),
                                     Row(mainAxisSize: MainAxisSize.max, children: [
                                       Expanded(
                                         child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            padding: const EdgeInsets.all(14),
-                                          ),
                                           onPressed: () async {
                                             if (_signUpFormKey.currentState!.validate()) {
                                               snackBarText.showBanner(msg: "Creating Account", context: context);
@@ -242,13 +234,12 @@ class _LoginPageState extends State<LoginPage> {
                                       ),
                                     ]),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 8,
                                     ),
                                     Row(mainAxisSize: MainAxisSize.max, children: [
                                       Expanded(
                                         child: ElevatedButton(
-                                          style:
-                                              ElevatedButton.styleFrom(padding: const EdgeInsets.all(14), backgroundColor: UIColor().secondaryOrange),
+                                          style: ElevatedButton.styleFrom(backgroundColor: UIColor().secondaryOrange),
                                           onPressed: () async {
                                             snackBarText.showBanner(msg: "Welcome Back", context: context);
                                             showDialog(
@@ -273,13 +264,12 @@ class _LoginPageState extends State<LoginPage> {
                                       ),
                                     ]),
                                     const SizedBox(
-                                      height: 16,
+                                      height: 8,
                                     ),
                                     Row(mainAxisSize: MainAxisSize.max, children: [
                                       Expanded(
                                         child: ElevatedButton(
-                                          style:
-                                              ElevatedButton.styleFrom(padding: const EdgeInsets.all(14), backgroundColor: UIColor().primaryOrange),
+                                          style: ElevatedButton.styleFrom(backgroundColor: UIColor().primaryOrange),
                                           onPressed: () async {
                                             snackBarText.showBanner(msg: "Welcome Back", context: context);
                                             showDialog(

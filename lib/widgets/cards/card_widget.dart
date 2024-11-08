@@ -9,8 +9,10 @@ class CardWidget extends StatelessWidget {
   final String checkInDate;
   final String checkOutDate;
   final bool isDarkMode;
+  final bool status;
 
-  const CardWidget({super.key, required this.checkInDate, required this.checkOutDate, required this.isDarkMode, required this.roomnum});
+  const CardWidget(
+      {super.key, required this.checkInDate, required this.checkOutDate, required this.isDarkMode, required this.roomnum, required this.status});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,10 @@ class CardWidget extends StatelessWidget {
             const SizedBox(
               height: 4,
             ),
+            NormalText(text: "Status: ${status ? "Checked In" : "Upcomming"}"),
+            const SizedBox(
+              height: 4,
+            ),
             const NormalText(text: "Facilities: Swimming Pool, Gym, Buffet"),
             const SizedBox(
               height: 12,
@@ -66,6 +72,37 @@ class CardWidget extends StatelessWidget {
                   ),
                 ),
               ),
+              if (status)
+                const SizedBox(
+                  width: 8,
+                ),
+              if (status)
+                Expanded(
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(UIColor().secondaryOrange)),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Dialog(
+                            backgroundColor: isDarkMode ? UIColor().darkGray : UIColor().lightGray,
+                            child: Padding(
+                              padding: const EdgeInsets.all(36),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [Image.asset('assets/qr.webp')],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: Text(
+                      "Key",
+                      style: Theme.of(context).textTheme.headlineMedium,
+                    ),
+                  ),
+                ),
             ]),
           ],
         ),

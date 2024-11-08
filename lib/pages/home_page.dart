@@ -17,9 +17,27 @@ class _HomePageState extends State<HomePage> {
       builder: (context, appState, child) {
         return ListView(
           children: [
-            CardWidget(checkInDate: "24/11/2024", checkOutDate: "1/12/2024", isDarkMode: appState.isDarkMode, roomnum: "Room 058"),
-            CardWidget(checkInDate: "5/12/2024", checkOutDate: "8/12/2024", isDarkMode: appState.isDarkMode, roomnum: "Room 132"),
-            CardWidget(checkInDate: "23/12/2024", checkOutDate: "25/12/2024", isDarkMode: appState.isDarkMode, roomnum: "Room 750"),
+            CardWidget(
+              checkInDate: "12/11/2024",
+              checkOutDate: "25/11/2024",
+              isDarkMode: appState.isDarkMode,
+              roomnum: "Room 058",
+              status: true,
+            ),
+            CardWidget(
+              checkInDate: "5/12/2024",
+              checkOutDate: "8/12/2024",
+              isDarkMode: appState.isDarkMode,
+              roomnum: "Room 132",
+              status: false,
+            ),
+            CardWidget(
+              checkInDate: "23/12/2024",
+              checkOutDate: "25/12/2024",
+              isDarkMode: appState.isDarkMode,
+              roomnum: "Room 750",
+              status: false,
+            ),
           ],
         );
       },

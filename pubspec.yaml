@@ -69,6 +69,7 @@ flutter:
   assets:
     - 'assets/hotel.jpg'
     - 'assets/placeholders/profile_placeholder.jpg'
+    - 'assets/qr.webp'
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
